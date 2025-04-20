@@ -23,7 +23,7 @@ DATA_FILE = "encrypted_data.json"
 USERS_FILE = "users.json"
 
 # Generate a key (this should be stored securely in production)
-KEY = os.getenv("SECRET")
+KEY = st.secrets["secret"]
 cipher = Fernet(KEY)
 
 # Load data from file if it exists
